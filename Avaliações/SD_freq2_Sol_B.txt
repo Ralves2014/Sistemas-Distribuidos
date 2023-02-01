@@ -1,0 +1,38 @@
+1)No contexto de cloud computing, qual o impacto da virtualização na previsibilidade e desempenho do serviço? e no uso de recursos?
+
+-----> No que toca a cloud computing a virtulização permite compartimentar e isolar serviços que executam sobre o mesmo hardware. Permitem a migração de aplicações de uma plataforma para outra. Na virtualização de cloud computing o CSP consegue distribuir os recursos de forma a otimizar todas as tarefas com os recursos disponiveis. No que toca a desempenho estão presentes vários fatores como por exemplo o armazenamento disponivel, a largura de banda, a elastecidade do serviço se assim for necessário e segurança (tratada pela entidade fornecedora do serviço).
+
+1.1) Quais os desafios de cloud computing?
+------> Nos desafios de cloud computing constam a disponibilidade do serviço dado que os recursos que uma determinada CSP fornece não são ilimitados. No caso de um cliente querer mudar de operador, devido a que o serviço alojado no CSP já está fortemente dependente das ferramentas nele presentes o utilizador terá dificuldade em trocar de fornecedor de cloud computing. Ao alojar um serviço num CSP os nossos dados ficam à disponibilidade do fornecedor podendo este fazer o que quiser com eles podendo tornar-se numa falta de confidencialidade. Imprevisibilidade do desempenho dado que os dados e os recursos são partilhados. A gestão de recursos tambem será algo a ter em conta no que toca aos desafios dado que estes poderão ser geridos por diferentes entidades.
+
+2)O que entende de microserviços?
+Que tecnologias implementadas nas aulas práticas podem ser usadas no contexto de microserviços.
+
+------> Microsserviços é uma abordagem  de desenvolvimento de software que separa as tarefas de um processo complexo num conjunto de serviçs«os e processos autómatos, que cominucam através de APIs, cooperando para a realização de um serviço composto.
+------> Nas aulas práticas utilizamos thread que de certa perspetiva podem ser usadas no contexto de microserviços.
+
+4)na escolha de Conteiner ou VM, que aspetos ponderar
+-----> Os containers permitem concentrar mais carga computacional na mesma plataforma, requerem menos tempo para arranque de uma solução, têm maior flexibilidade e maior facilidade para especificar um ambiente de execução. No entanto, a partilha da infraestrutura subjacente pode trazer desafios como a imprevisibilidade do desempenho e o esgotamento de recursos partilhados. Contrariamente, as VMs são executadas isoladamente, isto é, estas são imunes a qualquer exploit ou interferência de outras máquinas virtuais sendo assim mais fiáveis e seguras. Comparativamente com os containers as VMs são mais dinamicas, podendo ser desenvolvidas interativamente, sendo que estas podem ser tratadas como um simples computador. O software pode ser instalado manualmente. Há ainda a possibilidade de guardar o estado de uma VM podendo assim duplicar ou transferir de infrasestrutura desta VM.
+
+5)O que é web service
+------> Camada de software para facilitar a interação entre o cliente e o servidor, tornando-a mais rica e estruturada. Incluiem uma API que permite aceder a serviços remotos através da rede.
+Independentemente da linguagem de programação das aplicações cliente e servidor, os pedidos e resposta são usualmente codificados numa Representação Externa de dados e transmitidos sobre HTTP.
+
+8)O que entende por resolução de nomes com navegação
+controlada pelo servidor? Distinga serviço do nome de serviço de
+diretorias.
+
+----> Resolução de nomes controlada pelo servidor é quando um cliente tenta resolver um nome e o servidor faz a procura desta resolução. Esta resolução pode ser não-recursiva e recursiva. Na pesquisa não-recursiva o servidor a qual o cliente faz o primeiro contacto irá procurar nos outros servidores pela resolução de nome. Na pesquisa recursiva o servidor tenta resolver o nome e no caso de não conseguir passa a resolução do nome para outro servidor. Enquanto o nome não for resolvido a tarefa irá passar de servidor em servidor.
+----> Os serviços de nome fornecem informação dos objetos a partir do seu nome num sistema distribuido. Por sua vez, serviços de diretoria guardam associações entre nomes e atributos e permitem pesquisar entradas baseadas nos atributos.
+
+9)Para comunicação entre processos, como compara WEB
+services com REST services?
+
+----->Em comparação com Web Services os REST services reside na arquitetura REST em que cada objeto tem estado e cuja representação é transportada por pedidos HTTP. Cada pedido tem um significado próprio (criar, alterar, consultar e apagar objetos). Em comparação com os SOAP based Web Services são mais leves.
+
+10) Refira os tipos de Virtual Machine Monitor que conhece?
+
+------> type 1 hypervisor que executa diretamente numa certa plataforma (como programa de controlo de SOs). Um "guest" OS executa no segundo nível acima do hardware.
+------> type 2 hypervisor  executa sobre um OS. Um "guest" OS executa no segundo nível acima do hardware.
+
+

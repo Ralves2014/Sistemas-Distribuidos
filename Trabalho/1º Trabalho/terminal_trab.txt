@@ -1,0 +1,7 @@
+Execução:
+rmiregistry -J-classpath -Jbuild/classes 7000
+(Servidor) java -classpath build/classes:resources/postgresql.jar sd.rmi.Servidor 7000 localhost bd1 anunciante1 anuncios2022  
+(Cliente Geral) java -classpath build/classes sd.rmi.ClienteGeral localhost 7000
+(Cliente Gestão) java -classpath build/classes sd.rmi.ClienteGestao localhost 7000
+
+

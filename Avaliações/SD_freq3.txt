@@ -1,0 +1,12 @@
+1)Como afinar a replicação ativa.
+até quantas falhas aguenta um sistema com 5 RMs.
+
+2)O que é a arquitectura Gossip.
+
+3)O que entende de Shard.Vantagens e desvantagens de sharding
+
+4)Qual é a função da VFS.
+
+5)Diferenças entre NFS e AFS
+
+6)Qual é a chave que ser para desencriptar uma mensagem enviada de A para B com algoritmo RSA

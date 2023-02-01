@@ -1,0 +1,22 @@
+CREATE TABLE anuncios(
+    aid serial,
+    localizacao varchar(30),
+    preco varchar(5),
+    data varchar(40),
+    genero varchar(20),
+    anunciante varchar(30),
+    tipo_alojamento varchar(20),
+    tipo_anuncio varchar(20),
+    estado varchar(10),
+    primary key (aid)
+
+);
+
+CREATE TABLE mensagens(
+    aid serial,
+    remetente varchar(30),
+    mensagens varchar(50),
+    primary key (aid)
+);
+
+

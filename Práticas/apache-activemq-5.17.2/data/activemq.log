@@ -1,0 +1,119 @@
+2022-11-24 14:22:25,976 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:22:26,208 | INFO  | PListStore:[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-11-24 14:22:26,334 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-44903-1669299746214-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:22:26,345 | INFO  | Listening for connections at: tcp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:22:26,346 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,348 | INFO  | Listening for connections at: amqp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:22:26,349 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,351 | INFO  | Listening for connections at: stomp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:22:26,351 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,353 | ERROR | Failed to start Apache ActiveMQ (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-44903-1669299746214-0:1) | org.apache.activemq.broker.BrokerService | main
+java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Endereço já em uso
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:30)
+	at org.apache.activemq.broker.BrokerService.registerConnectorMBean(BrokerService.java:2241)
+	at org.apache.activemq.broker.BrokerService.startTransportConnector(BrokerService.java:2722)
+	at org.apache.activemq.broker.BrokerService.startAllConnectors(BrokerService.java:2618)
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:757)
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:719)
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:622)
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)
+	at org.apache.activemq.console.Main.main(Main.java:115)
+Caused by: java.io.IOException: Failed to bind to server socket: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Endereço já em uso
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:36)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:146)
+	at org.apache.activemq.transport.tcp.TcpTransportFactory.doBind(TcpTransportFactory.java:62)
+	at org.apache.activemq.transport.TransportFactorySupport.bind(TransportFactorySupport.java:40)
+	at org.apache.activemq.broker.TransportConnector.createTransportServer(TransportConnector.java:336)
+	at org.apache.activemq.broker.TransportConnector.getServer(TransportConnector.java:146)
+	at org.apache.activemq.broker.TransportConnector.asManagedConnector(TransportConnector.java:111)
+	at org.apache.activemq.broker.BrokerService.registerConnectorMBean(BrokerService.java:2236)
+	... 40 more
+Caused by: java.net.BindException: Endereço já em uso
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.Net.bind(Net.java:544)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/javax.net.DefaultServerSocketFactory.createServerSocket(ServerSocketFactory.java:231)
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:143)
+	... 46 more
+2022-11-24 14:22:26,364 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-44903-1669299746214-0:1) is shutting down | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:22:26,364 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,365 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,365 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,365 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,365 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:22:26,367 | INFO  | PListStore:[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-11-24 14:22:26,368 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2022-11-24 14:22:26,368 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2022-11-24 14:22:26,368 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | main
+2022-11-24 14:22:26,381 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-44903-1669299746214-0:1) uptime 0.417 seconds | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:22:26,382 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-44903-1669299746214-0:1) is shutdown | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:22:26,385 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Endereço já em uso | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-11-24 14:25:34,823 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:25:34,868 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2022-11-24 14:25:34,974 | INFO  | PListStore:[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-11-24 14:25:35,102 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-38527-1669299934980-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:25:35,113 | INFO  | Listening for connections at: tcp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:25:35,113 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:25:35,115 | INFO  | Listening for connections at: amqp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:25:35,116 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:25:35,118 | INFO  | Listening for connections at: stomp://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:25:35,118 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:25:35,120 | INFO  | Listening for connections at: mqtt://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-11-24 14:25:35,121 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:25:35,124 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-11-24 14:25:35,150 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2022-11-24 14:25:35,188 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@71d9cb05{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-11-24 14:25:35,222 | INFO  | Listening for connections at ws://rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-11-24 14:25:35,222 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-11-24 14:25:35,223 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-38527-1669299934980-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:25:35,223 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-11-24 14:25:35,578 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-11-24 14:25:35,578 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-11-24 14:49:16,878 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-38527-1669299934980-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-20
+2022-11-24 14:49:16,880 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-20
+2022-11-24 14:49:16,882 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-20
+2022-11-24 14:49:16,883 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-20
+2022-11-24 14:49:16,884 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-20
+2022-11-24 14:49:16,893 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-20
+2022-11-24 14:49:16,897 | INFO  | PListStore:[/home/rodrigo/Desktop/SD/apache-activemq-5.17.2/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-20
+2022-11-24 14:49:16,897 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-20
+2022-11-24 14:49:16,897 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-20
+2022-11-24 14:49:16,898 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-20
+2022-11-24 14:49:16,907 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-38527-1669299934980-0:1) uptime 23 minutes | org.apache.activemq.broker.BrokerService | Thread-20
+2022-11-24 14:49:16,907 | INFO  | Apache ActiveMQ 5.17.2 (localhost, ID:rodrigo-VivoBook-ASUSLaptop-X513IA-M513IA-38527-1669299934980-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-20
